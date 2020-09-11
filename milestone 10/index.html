@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- 
+Author: Katie Munoz
+File: index.html
+Date: 04/03/20
+Description:
+A HTML file to have the user log into their account.
+-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Blog App</title>
+</head>
+<style type="text/css">
+Body {
+	font-family: Arial, Bold;
+	background-color: #CCCAEE;
+	color: #000000;
+}
+
+img {
+	height: 75px;
+}
+
+.login {
+	margin: 20px auto;
+	width: 300px;
+}
+
+.login-screen {
+	background-color: #FFF;
+	padding: 20px;
+	border-radius: 5px
+}
+
+.app-title {
+	text-align: center;
+	color: #777;
+}
+
+input {
+	text-align: center;
+	background-color: #ECF0F1;
+	border: 2px solid transparent;
+	border-radius: 3px;
+	font-size: 16px;
+	font-weight: 200;
+	padding: 10px 0;
+	width: 250px;
+	transition: border .5s;
+}
+
+.control-group {
+	margin-bottom: 10px;
+}
+</style>
+<body>
+
+	<!-- On submit call PHP script pagehandler.php-->
+	<form action="loginhandler.php" method="post">
+		<header>
+			<img src="camera.png" alt="LOGO">
+		</header>
+		<div class="login">
+			<div class="login-screen">
+				<div class="app-title">
+					<h1>LOGIN</h1>
+				</div>
+
+				<hr>
+				<label>User Name</label>
+				<div class="control-group">
+					<input type="text" name="Username" required>
+				</div>
+				<br> <label>Password</label>
+				<div class="control-group">
+					<input type="Password" name="Password" required>
+				</div>
+				<br>
+				<hr>
+				<input type="submit" name="submit">
+				<ul>
+					<a href="register.html"> No account? Register here! </a>
+				</ul>
+			</div>
+		</div>
+	</form>
+</body>
+</html>

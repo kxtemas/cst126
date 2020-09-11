@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!-- 
+Author: Katie Munoz
+File: blogpostm3.html
+Date: 03/03/20
+Description:
+An HTML file allow the user to create a post.
+-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Create Blog Entruy</title>
+
+</head>
+<style type="text/css">
+Body {
+	font-family: Arial, Bold;
+	background-color: #CCCAEE;
+	color: #000000;
+}
+
+input {
+	text-align: center;
+	background-color: #ffffff;
+	border: 2px solid transparent;
+	border-radius: 3px;
+	font-size: 16px;
+	font-weight: 200;
+	padding: 10px 0;
+	width: 375px;
+	transition: border .5s;
+}
+
+p {
+	font-size: 20px;
+	text-align: center;
+}
+
+img {
+	height: 75px;
+}
+
+.header {
+	font-size: 25px;
+	text-align: center;
+	display: inline-block;
+	position: absolute;
+	left: 40%;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+li a:hover {
+	background-color: #111;
+}
+
+.active {
+	background-color: #4CAF50;
+}
+</style>
+<body>
+	<form action="posthandler.php" method="post">
+		<header>
+			<!---insert image from files--->
+			<img src="camera.png " alt="LOGO">
+			<div class="header">
+				<h2>Create Blog Entry</h2>
+			</div>
+		</header>
+		<hr>
+		<!-- tab to the login or register page -->
+		<ul>
+			<li style="display: inline"><a href="loginresponse.php">Home Page</a></li>
+		<li style="display: inline"><a href="blogpost.html">Create a Blog Post</a></li>
+		<li style="display: inline"><a href="founder.html">About the Creator</a></li>
+		<li style="display: inline"><a href="makeBlogRequest.php">List Blogs</a></li>
+		<li style="display: inline"><a href="searchblogs.html">Search a Blog Post</a></li>
+		<li style="display: inline"><a href="index.html">Log Out</a></li>
+		</ul>
+		<hr>
+		<p>
+			<!-- user can create a blog post
+	the name will connect to our database 
+	and the length will limit the characters -->
+			<label>Title</label><br> <input type="text" name="Title" 
+				maxlength="50" size="50" required>
+		</p>
+		<p>
+			<label>Content</label><br>
+			<textarea name="Content" rows="10" cols="50" required></textarea>
+		</p> 
+		<p>
+		<input type="submit" name="submit">
+		</p>
+	</form>
+</body>
+</html>

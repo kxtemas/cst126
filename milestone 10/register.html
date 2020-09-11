@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- 
+Author: Katie Munoz
+File: register.html
+Date: 01/21/20
+
+Description:
+ Creating an HTML form to take user input for registration.
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Register Form</title>
+</head>
+<style type="text/css">
+Body {
+	font-family: Arial, Bold;
+	background-color: #CCCAEE;
+	color: #000000;
+}
+
+img {
+	height: 75px;
+}
+
+.register {
+	margin: 20px auto;
+	width: 400px;
+}
+
+.register-screen {
+	background-color: #FFF;
+	padding: 20px;
+	border-radius: 5px
+}
+
+.app-title {
+	text-align: center;
+	color: #777;
+}
+
+input {
+	text-align: center;
+	background-color: #ECF0F1;
+	border: 2px solid transparent;
+	border-radius: 3px;
+	font-size: 12px;
+	font-weight: 150;
+	padding: 10px 0;
+	width: 350px;
+	transition: border .5s;
+}
+
+.control-group {
+	margin-bottom: 10px;
+}
+</style>
+<body>
+<!-- On submit call PHP script pagehandler.php-->
+	<form action="registerrhandler.php" method="post">
+		<img src="camera.png" alt="LOGO">
+	<div class="register">
+	<div class="register-screen">
+		<div class="app-title">
+			<h1>REGISTER</h1>
+		</div>
+		<hr>
+		<hr>
+		<label>First Name: </label>
+		<div class="control-group">
+			<input type="text" name="firstName" required>
+		</div>
+		<br> <label>Last Name: </label>
+		<div class="control-group">
+			<input type="text" name="lastName" required>
+		</div>
+		<br> <label> Email: </label>
+		<div class="control-group">
+			<input type="email" name="eMail" required>
+		</div>
+		<br> <label> Phone Number:</label>
+		<div class="control-group">
+			<input type="number" name="phoneNumber">
+		</div>
+		<br> <label> Username: </label>
+		<div class="control-group">
+			<input type="text" name="Username" required>
+		</div>
+		<br> <label>Password: </label>
+		<div class="control-group">
+			<input type="password" name="Password" required>
+		</div>
+		<br> <label>Confirm Password: </label>
+		<div class="control-group">
+			<input type="password" name="confirmPassword" required>
+		</div>
+		<br>
+		<hr>
+		<input type="submit" name="submit">
+		<ul>
+			<a href="index.html"> Already have an account? Log in here! </a>
+		</ul>
+	</div>
+	</div>
+</form>
+</body>
+</html>

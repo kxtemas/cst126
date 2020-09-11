@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- 
+Name: Katie Munoz
+Date: 04/ 06/ 2020
+File: Searchblogs.html
+Description: Gives the user a search engine for blogs.
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Create Blog Entry</title>
+</head>
+<style type="text/css">
+Body {
+	font-family: Arial, Bold;
+	background-color: #CCCAEE;
+	color: #000000;
+}
+
+.header {
+	font-size: 25px;
+	text-align: center;
+	display: inline-block;
+	position: absolute;
+	left: 40%;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+li a:hover {
+	background-color: #111;
+}
+
+.active {
+	background-color: #4CAF50;
+}
+
+p {
+	font-size: 20px;
+	text-align: center;
+}
+
+img {
+	height: 75px;
+}
+
+input {
+	text-align: center;
+	background-color: #ffffff;
+	border: 2px solid transparent;
+	border-radius: 3px;
+	font-size: 16px;
+	font-weight: 200;
+	padding: 10px 0;
+	width: 375px;
+	transition: border .5s;
+}
+</style>
+<body>
+	<form action="searchHandler.php" method="post">
+		<header>
+		<img src="camera.png" alt="LOGO">
+			<div class="header">
+			<h2>Search Blog Entry</h2></div>
+		</header>
+		<hr>
+		<!-- tab to the login or register page -->
+		<ul>
+			<li style="display: inline"><a href="loginresponse.php">Home Page</a></li>
+		<li style="display: inline"><a href="blogpost.html">Create a Blog Post</a></li>
+		<li style="display: inline"><a href="founder.html">About the Creator</a></li>
+		<li style="display: inline"><a href="makeBlogRequest.php">List Blogs</a></li>
+		<li style="display: inline"><a href="searchblogs.html">Search a Blog Post</a></li>
+		<li style="display: inline"><a href="index.html">Log Out</a></li>
+		</ul>
+		<hr>
+		<p>
+			<!-- user can create a blog post
+	the name will connect to our database 
+	and the length will limit the characters -->
+			<label>Search Title</label><br> <input type="text"
+				name="searchTitle" maxlength="50" size="50">
+		</p>
+		<p>
+			<label>Search Content</label><br> <input type="text"
+				name="searchContent" maxlength="50" size="50">
+		</p>
+		<p>
+		<input type="submit" name="submit" value="Search">
+		</p>
+	</form>
+</body>
+</html>
