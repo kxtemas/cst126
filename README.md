@@ -1,7 +1,7 @@
-Hi!
+Hi, welcome to my CST-126 Milestone Project!
 ===================================================================================================================================
 
-This is a Blog Weboage
+This overalll project is a blog post project where users are able to create, edit and delete their posting.
 ------------------
 
 This repository contains the code built to create a personal blog post webpage using PHP, MySQL and HTML. 
